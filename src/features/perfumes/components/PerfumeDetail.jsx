@@ -5,7 +5,7 @@ import { crearOrden } from "../../ordenes/ordenService";
 import { getPerfumeById } from "../../../Api/perfumeApi";
 import { crearDecant } from "../../decants/decantService";
 import { toast } from "react-toastify";
-import "./PerfumeDetail.css";
+import "./perfumeDetail.css";
 
 const PerfumeDetail = () => {
   const { id } = useParams();
