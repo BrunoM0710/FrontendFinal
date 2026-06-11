@@ -1,0 +1,216 @@
+:root {
+  --color-background: #121212;
+  --color-surface: #1b1b1b;
+  --color-surface-hover: #242424;
+
+  --color-primary: #f5f5f5;
+  --color-secondary: #b5b5b5;
+
+  --color-border: #2f2f2f;
+
+  --color-accent: #c9a66b;
+  --color-accent-hover: #d8b57a;
+
+  --color-success: #52b788;
+  --color-danger: #ff6b6b;
+
+  --font-family: "Inter", system-ui, sans-serif;
+
+  --radius: 16px;
+
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.35);
+
+  --transition: all 0.2s ease;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f2f2f2;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d4d4d4;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b8b8b8;
+}
+
+body {
+  background: var(--color-background);
+
+  color: var(--color-primary);
+
+  font-family: var(--font-family);
+
+  min-height: 100vh;
+
+  line-height: 1.5;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+
+  color: inherit;
+}
+button {
+  border: none;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+input,
+select,
+textarea {
+  background: var(--color-surface);
+
+  color: var(--color-primary);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: 12px;
+
+  padding: 0.85rem 1rem;
+
+  transition: var(--transition);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+
+  border-color: var(--color-accent);
+
+  box-shadow: 0 0 0 4px rgba(201, 166, 107, 0.15);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: var(--color-primary);
+}
+
+p {
+  color: var(--color-secondary);
+}
+
+.btn {
+  border: none;
+
+  border-radius: 12px;
+
+  padding: 0.85rem 1.5rem;
+
+  font-size: 0.95rem;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--color-accent);
+
+  color: #121212;
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-hover);
+
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: var(--color-surface);
+
+  color: var(--color-primary);
+
+  border: 1px solid var(--color-border);
+}
+
+.btn-secondary:hover {
+  background: var(--color-surface-hover);
+}
+
+.btn-danger {
+  background: var(--color-danger);
+
+  color: white;
+}
+
+.btn-danger:hover {
+  opacity: 0.9;
+}
+.success-message {
+  background: rgba(82, 183, 136, 0.12);
+
+  border: 1px solid rgba(82, 183, 136, 0.3);
+
+  color: #7bd6a5;
+
+  padding: 1rem;
+
+  border-radius: 12px;
+
+  margin-top: 1rem;
+
+  text-align: center;
+
+  animation: fadeIn 0.3s ease;
+}
+
+.error-message {
+  background: rgba(255, 107, 107, 0.12);
+
+  border: 1px solid rgba(255, 107, 107, 0.3);
+
+  color: #ff9c9c;
+
+  padding: 1rem;
+
+  border-radius: 12px;
+
+  margin-top: 1rem;
+
+  text-align: center;
+
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}

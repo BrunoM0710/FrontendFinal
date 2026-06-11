@@ -1,0 +1,62 @@
+.profile-card,
+.membership-card {
+  background: var(--color-surface);
+
+  border: 1px solid var(--color-border);
+
+  border-radius: 16px;
+
+  padding: 1.5rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.profile-card p {
+  margin-bottom: 0.75rem;
+}
+
+.premium-badge {
+  display: inline-block;
+
+  background: rgba(201,166,107,0.15);
+
+  color: var(--color-accent);
+
+  border: 1px solid rgba(201,166,107,0.3);
+
+  padding: 0.5rem 1rem;
+
+  border-radius: 999px;
+
+  font-weight: 600;
+}
+
+.plus-badge {
+  display: inline-block;
+
+  background: rgba(255,255,255,0.08);
+
+  color: white;
+
+  border: 1px solid var(--color-border);
+
+  padding: 0.5rem 1rem;
+
+  border-radius: 999px;
+
+  font-weight: 600;
+}
+
+.btn-premium {
+  margin-top: 1rem;
+
+  background: var(--color-accent);
+
+  color: black;
+
+  padding: 0.8rem 1.2rem;
+
+  border-radius: 12px;
+
+  font-weight: 600;
+}

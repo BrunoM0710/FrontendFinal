@@ -1,0 +1,24 @@
+.ordenes-page {
+  width: 100%;
+}
+
+.ordenes-page h1 {
+  margin-bottom: 2rem;
+
+  font-size: 2rem;
+
+  color: var(--color-primary);
+
+  font-weight: 700;
+}
+
+.orden-grid {
+  display: grid;
+
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(280px, 1fr)
+  );
+
+  gap: 1.5rem;
+}
