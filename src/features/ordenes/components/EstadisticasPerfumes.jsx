@@ -39,8 +39,31 @@ const EstadisticasPerfumes = ({ estadisticas }) => {
       },
     ],
   };
-
-  // Conservá tus options actuales de Chart.js
+  const options = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        labels: {
+          color: "#ffffff",
+        },
+      },
+    },
+    scales: {
+      x: {
+        ticks: {
+          color: "#cccccc",
+        },
+      },
+      y: {
+        beginAtZero: true,
+        ticks: {
+          color: "#cccccc",
+          precision: 0,
+        },
+      },
+    },
+  };
 
   return (
     <div style={{ height: "350px" }}>
@@ -52,4 +75,5 @@ const EstadisticasPerfumes = ({ estadisticas }) => {
     </div>
   );
 };
+
 export default EstadisticasPerfumes;
