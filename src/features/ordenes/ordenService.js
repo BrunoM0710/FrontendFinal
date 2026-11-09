@@ -3,6 +3,7 @@ import {
   crearOrdenRequest,
   eliminarOrdenRequest,
   obtenerOrdenPorIdRequest,
+  obtenerEstadisticasPerfumesRequest,
 } from "../../Api/ordenApi";
 
 export const obtenerOrdenesUsuario = async (usuarioId) => {
@@ -19,3 +20,9 @@ export const eliminarOrden = async (usuarioId, ordenId) => {
 export const obtenerOrdenPorId = async (idOrden) => {
   return await obtenerOrdenPorIdRequest(idOrden);
 };
+
+export const obtenerEstadisticasPerfumes = async () => {
+  return await obtenerEstadisticasPerfumesRequest();
+
+};
+

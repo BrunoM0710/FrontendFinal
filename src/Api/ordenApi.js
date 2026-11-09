@@ -24,3 +24,8 @@ export const obtenerOrdenPorIdRequest = async (idOrden) => {
 
   return response.data;
 };
+export const obtenerEstadisticasPerfumesRequest = async () => {
+  const response = await axiosClient.get("/ordenes/estadisticas/perfumes");
+
+  return response.data;
+};
