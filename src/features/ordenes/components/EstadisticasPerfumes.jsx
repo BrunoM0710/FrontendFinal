@@ -20,12 +20,18 @@ ChartJS.register(
 );
 
 const EstadisticasPerfumes = ({ estadisticas }) => {
+  // Filtrar perfumes sin compras, ordenar y limitar a 10
+  const topPerfumes = [...estadisticas]
+    .filter((item) => item.cantidadCompras > 0)
+    .sort((a, b) => b.cantidadCompras - a.cantidadCompras)
+    .slice(0, 10);
+
   const data = {
-    labels: estadisticas.map((item) => `${item.marca} ${item.nombre}`),
+    labels: topPerfumes.map((item) => `${item.marca} ${item.nombre}`),
     datasets: [
       {
         label: "Cantidad de compras",
-        data: estadisticas.map((item) => item.cantidadCompras),
+        data: topPerfumes.map((item) => item.cantidadCompras),
         backgroundColor: "rgba(201, 166, 107, 0.7)",
         borderColor: "#c9a66b",
         borderWidth: 1,
@@ -34,37 +40,16 @@ const EstadisticasPerfumes = ({ estadisticas }) => {
     ],
   };
 
-  const options = {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: {
-        labels: {
-          color: "#ffffff",
-        },
-      },
-    },
-    scales: {
-      x: {
-        ticks: {
-          color: "#cccccc",
-        },
-      },
-      y: {
-        beginAtZero: true,
-        ticks: {
-          color: "#cccccc",
-          precision: 0,
-        },
-      },
-    },
-  };
+  // Conservá tus options actuales de Chart.js
 
   return (
     <div style={{ height: "350px" }}>
-      <Bar data={data} options={options} />
+      {topPerfumes.length > 0 ? (
+        <Bar data={data} options={options} />
+      ) : (
+        <p>No hay perfumes con compras registradas.</p>
+      )}
     </div>
   );
 };
-
 export default EstadisticasPerfumes;
