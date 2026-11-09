@@ -23,6 +23,4 @@ export const obtenerOrdenPorId = async (idOrden) => {
 
 export const obtenerEstadisticasPerfumes = async () => {
   return await obtenerEstadisticasPerfumesRequest();
-
 };
-

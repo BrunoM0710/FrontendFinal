@@ -53,6 +53,8 @@ const DashboardPage = () => {
 
         const response = await obtenerEstadisticasPerfumes();
 
+        setEstadisticas(response.estadisticas ?? []);
+
         if (activo) {
           setEstadisticas(response.estadisticas ?? []);
         }
